@@ -6,9 +6,21 @@ node bower_components/reveal.js/plugin/notes-server/
 Na ekranie nr 8
 
 
+
 # <span style="color: #b58900">Disclaimer</span>
 <!-- .slide: data-background-color="black" -->
-<!-- Disclaimer czego? -->
+
+
+## <span style="color: #b58900">Cykl PowerUser</span>
+<!-- .slide: data-background-color="black" -->
+
+
+## <span style="color: #b58900">Idea OpenSource</span>
+<!-- .slide: data-background-color="black" -->
+
+
+## <span style="color: #b58900">Hacker:Space</span>
+<!-- .slide: data-background-color="black" -->
 
 
 
