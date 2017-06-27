@@ -124,13 +124,20 @@ Note:
 - Przeskakiwanie po workspace'ach
 - Okna w 1 workspacie
 - Bar
-
-
-
 <!-- Głęboki nur -->
 <!-- Podstawy konfiguracji i3 -->
+
+
+
+# Jak znaleźć klawisze
+
+
+- scancode
+- keycode
+- keysym
+
+
 <!-- Adding i3 status -->
-<!-- - How to find keysyms -->
 <!-- - Bonus: jak połącyć się z wifi z konsoli ;) -->
 
 
