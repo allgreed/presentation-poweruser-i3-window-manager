@@ -1,5 +1,6 @@
 # Poweruser: i3 window manager
 ## by Olgierd &#34;Allgreed&#34; Kasprowicz
+<!-- Wszelkie obrazki należą do ich właścicieli -->
 
 Note:
 node bower_components/reveal.js/plugin/notes-server/
@@ -38,7 +39,10 @@ Note:
 - wm zarządza wyświetlaniem okien
 
 
-## Demo na maszynie wirtualnej
+## Demo time!
+
+Note:
+Na maszynie wirtualnej, odpalam TTY (F2), sekundę śmigam po terminalu, załączam X ```startx```, odpalam cosie, załączam Compiza ```compiz```
 
 
 
@@ -118,9 +122,10 @@ Otwarta licencja
 
 
 
-# Demo
+# Demo time!
 
 Note:
+U mnie:
 - Przeskakiwanie po workspace'ach
 - Okna w 1 workspacie
 - Bar
@@ -132,9 +137,24 @@ Note:
 # Jak znaleźć klawisze
 
 
-- scancode
-- keycode
-- keysym
+## scancodes
+
+![](img/scancodes.gif)
+
+
+## keycodes
+
+```xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'```
+
+![](img/keycodes.png)
+
+
+## keysyms
+
+```xev | sed -n 1~2p -u | awk '/keysym/ {print substr($7, 1, length($7)-2)}'```
+
+![](img/keysyms.png)
+
 
 
 <!-- Adding i3 status -->
@@ -144,9 +164,12 @@ Note:
 
 Questions? :)
 
-<!-- Przydatne linki -->
+<!-- Ciekawe linki -->
+- [1st demo inspiration](https://www.youtube.com/watch?v=4J5snV2wjtw)
 - [Window managers comparison](https://wiki.archlinux.org/index.php/Comparison_of_tiling_window_managers)
 - [Window managers memory consumption](https://askubuntu.com/questions/181370/how-heavy-on-resources-is-cinnamon-desktop-environment)
+- [Scancodes, keycodes, keysyms theorys](http://www.tldp.org/HOWTO/BackspaceDelete/actions.html)
+- [More on keycodes and keysyms](https://wiki.archlinux.org/index.php/extra_keyboard_keys)
 
 Materiały:
 http://walther.io/how-to-replace-unity-with-i3-window-manager-on-ubuntu-1204/
