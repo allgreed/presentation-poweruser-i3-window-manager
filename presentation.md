@@ -120,9 +120,14 @@ Otwarta licencja
 
 # Demo
 
+Note:
+- Przeskakiwanie po workspace'ach
+- Okna w 1 workspacie
+- Bar
 
 
-<!-- - Głęboki nur -->
+
+<!-- Głęboki nur -->
 <!-- Podstawy konfiguracji i3 -->
 <!-- Adding i3 status -->
 <!-- - How to find keysyms -->
