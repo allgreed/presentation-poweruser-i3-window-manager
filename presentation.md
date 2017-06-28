@@ -237,7 +237,8 @@ np.
 
 # Defaultowy config
 
-<!-- Tutaj robić rzeczy -->
+
+![](img/cheatsheet.png)
 
 
 
@@ -273,6 +274,7 @@ Likwiduje bug podczas odpalania nautiliusa
 
 Note:
 Jak jest problem z lightdm.conf (nie ma go, nie ma wpisu user-session) to można olać. Testowane na wirtualce.
+
 
 
 # Jak znaleźć klawisze
@@ -313,15 +315,18 @@ kernel dostaje od klawiatury
 
 Questions? :)
 
-<!-- Ciekawe linki -->
+
+
+## Materiały:
+- http://walther.io/how-to-replace-unity-with-i3-window-manager-on-ubuntu-1204/
+- https://i3wm.org/screenshots/
+- https://fedoramagazine.org/getting-started-i3-window-manager/
+- https://i3wm.org/docs/userguide.html
+
+
+## Ciekawe linki:
 - [1st demo inspiration](https://www.youtube.com/watch?v=4J5snV2wjtw)
 - [Window managers comparison](https://wiki.archlinux.org/index.php/Comparison_of_tiling_window_managers)
 - [Window managers memory consumption](https://askubuntu.com/questions/181370/how-heavy-on-resources-is-cinnamon-desktop-environment)
-- [Scancodes, keycodes, keysyms theorys](http://www.tldp.org/HOWTO/BackspaceDelete/actions.html)
+- [Scancodes, keycodes, keysyms theory](http://www.tldp.org/HOWTO/BackspaceDelete/actions.html)
 - [More on keycodes and keysyms](https://wiki.archlinux.org/index.php/extra_keyboard_keys)
-
-Materiały:
-http://walther.io/how-to-replace-unity-with-i3-window-manager-on-ubuntu-1204/
-https://i3wm.org/screenshots/
-https://fedoramagazine.org/getting-started-i3-window-manager/
-https://i3wm.org/docs/userguide.html
