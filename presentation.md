@@ -41,7 +41,7 @@ Note:
 ## Demo time!
 
 Note:
-Na maszynie wirtualnej, odpalam TTY (F2), sekundę śmigam po terminalu, załączam X ```startx```, odpalam cosie, załączam Compiza ```compiz```
+Na maszynie wirtualnej, odpalam TTY (ctrl+F1), przechodzę na pulpit, edytuję vimem keton.txt, odpalam "cal", wyszukuję lynxem na google.pl "keton", próbuję odpalić firefoxa, załączam X ```startx```, odpalam cosie, załączam Compiza ```compiz```
 
 
 
@@ -87,6 +87,12 @@ Jak coś jest do wszystkiego to jest do niczego, w praktyce z floatowania się n
 # Czemu i3?
 
 
+![](img/terminal_friend.png)
+
+Note:
+Trzeba się zaprzyjaźnić z terminalem
+
+
 alopex, Awesome, bspwm, catwm, dswm, dwm, echinus, euclid-wm, FrankenWM, herbstluftwm, <span style="color: #b58900">i3</span>, Ion3, monsterwm, Musca, Notion, qtile, Ratpoison, Snapwm, Spectrwm, Stumpwm, sway, subtle, Wingo, WMFS, wmii, xmonad
 
 Note:
@@ -101,7 +107,7 @@ Note:
 Popularność
 
 
-```ps -eo rss,pid,euser,args:100 --sort %mem | grep -i i3 | awk '{printf $1/1024 "MB"; $1=""; print }' | awk '{print $1}' | sed 's/..$//' | python -c "import sys; print(sum(float(l) for l in sys.stdin))"
+```ps -eo rss,pid,euser,args:100 --sort %mem | grep -i i3 | awk '{printf $1/1024; $1=""; print $1 }' | python -c "import sys; print(sum(float(l) for l in sys.stdin))"
 ```
 
 |       wm       |   RAM   |
@@ -128,9 +134,145 @@ U mnie:
 - Przeskakiwanie po workspace'ach
 - Okna w 1 workspacie
 - Bar
-<!-- Głęboki nur -->
-<!-- Podstawy konfiguracji i3 -->
 
+
+
+# Głęboki nur
+## "Deep dive"
+
+
+## <span style="color: #b58900">Disclaimer</span>
+<!-- .slide: data-background-color="black" -->
+
+
+## Instalacja i3
+
+``` sh
+    sudo apt install i3
+```
+![](img/logout.png)
+
+
+![](img/choose_session.png)
+
+![](img/initconf.png)
+
+
+
+# Podstawy konfiguracji i3
+
+
+## <span style="color: #b58900">Disclaimer</span>
+<!-- .slide: data-background-color="black" -->
+
+Note:
+- pełna dowolność, nie ma jedynej słusznej drogi
+- wiem, że nie ogarniacie jeszcze
+- wytłumaczę ideę, a potem jak się poruszać
+
+
+![](img/mod_key.png)
+
+```
+    vim .config/i3/config
+```
+
+
+![](img/basic_config.png)
+
+Note:
+Set -> to co wybraliśmy wcześniej przez GUI
+
+
+## Exec
+
+```
+    exec[_always] [--no-startup-id] <command>
+```
+
+- [_always] - przy każdym reloadzie configu
+- [--no-startup-id] - zablokuj notyfikacje startowe
+
+Note:
+Bezpośrednio do shella (korzystając z $PATH), więc nie ma aliasów z .bashrc
+Niektóre aplikacje nie obsugują poprawnie notyfikacji startowych i wtedy kursor zmienia się w zegar na minutę
+_always jest świetny np. do ustawiania tapety 
+
+
+## Bindsym
+
+```
+    bindsym [--release] [<Modifiers>+]<keysym> command
+```
+
+- [--release] -> przydatne przy screenshotach kawałka ekranu
+- Modifiers + keysym -> np. Shift+x
+
+Note:
+Bindsym to "bind symbol", command jest komendą i3, a nie shella
+
+
+## Set
+
+```
+    set $<name> <value>
+```
+
+np.
+
+```
+    set $keton "relatywnie długi tekst"
+```
+
+
+## Przykład
+
+```
+    set $imgedit "gimp --no-splash"
+
+    bindsym Shift+i exec $imgedit
+```
+
+
+
+# Defaultowy config
+
+<!-- Tutaj robić rzeczy -->
+
+
+
+# Żegnaj Unity
+
+
+## Compiz
+```sudo apt autoremove --purge compiz compiz-gnome compiz-plugins-default libcompizconfig0```
+
+
+## Reszta Unity
+```sudo apt autoremove --purge unity unity-common unity-services unity-lens-* unity-scope-* libunity-core-6* libunity-misc4 appmenu-gtk appmenu-gtk3 appmenu-qt* overlay-scrollbar* activity-log-manager-control-center firefox-globalmenu thunderbird-globalmenu```
+
+
+## Zablokowanie desktopu
+```gsettings set org.gnome.desktop.background show-desktop-icons false```
+
+Note:
+Likwiduje bug podczas odpalania nautiliusa
+
+
+## Przestawienie lightdm na i3
+
+```sh
+    echo "exec i3" >> ~/.xinitrc
+```
+
+```sh
+    sudo vim /etc/lightdm/lightdm.conf
+```
+
+```user-session=i3```
+
+Note:
+Jak jest problem z lightdm.conf (nie ma go, nie ma wpisu user-session) to można olać. Testowane na wirtualce.
 
 
 # Jak znaleźć klawisze
@@ -162,14 +304,11 @@ kernel dostaje od klawiatury
 
 Note: 
 kernel dostaje od klawiatury
-
-
-
 <!-- Podstawowa konfiguracja i3 status -->
 <!-- Jak ustawić tapetę -->
 <!-- Font awesome -->
 <!-- - Bonus: jak połącyć się z wifi z konsoli ;) -->
-
+<!-- Add notes to disclaimers -> all -->
 
 
 Questions? :)
