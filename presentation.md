@@ -1,6 +1,5 @@
 # Poweruser: i3 window manager
 ## by Olgierd &#34;Allgreed&#34; Kasprowicz
-<!-- Wszelkie obrazki należą do ich właścicieli -->
 
 Note:
 node bower_components/reveal.js/plugin/notes-server/
@@ -102,7 +101,7 @@ Note:
 Popularność
 
 
-```ps -eo rss,pid,euser,args:100 --sort %mem | grep -v grep | grep -i i3 | awk '{printf $1/1024 "MB"; $1=""; print }' | awk '{print $1}' | sed 's/.$//' | sed 's/.$//' | python -c "import sys; print(sum(float(l) for l in sys.stdin))"
+```ps -eo rss,pid,euser,args:100 --sort %mem | grep -i i3 | awk '{printf $1/1024 "MB"; $1=""; print }' | awk '{print $1}' | sed 's/..$//' | python -c "import sys; print(sum(float(l) for l in sys.stdin))"
 ```
 
 |       wm       |   RAM   |
@@ -141,12 +140,18 @@ U mnie:
 
 ![](img/scancodes.gif)
 
+Note: 
+kernel dostaje od klawiatury
+
 
 ## keycodes
 
 ```xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'```
 
 ![](img/keycodes.png)
+
+Note: 
+kernel dostaje od klawiatury
 
 
 ## keysyms
@@ -155,9 +160,14 @@ U mnie:
 
 ![](img/keysyms.png)
 
+Note: 
+kernel dostaje od klawiatury
 
 
-<!-- Adding i3 status -->
+
+<!-- Podstawowa konfiguracja i3 status -->
+<!-- Jak ustawić tapetę -->
+<!-- Font awesome -->
 <!-- - Bonus: jak połącyć się z wifi z konsoli ;) -->
 
 

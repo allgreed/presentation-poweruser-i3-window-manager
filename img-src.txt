@@ -1,0 +1,9 @@
+This file contains image sources that were used in my presentation:
+Of course I do not claim authorship over them.
+
+http://clone.turlucode.com/wp-content/uploads/2016/02/linux_basic_components_of_a_gui.png
+http://www.philipstorr.id.au/pcbook/images/scancod1.gif 
+https://pbs.twimg.com/media/CqGdziaXYAA0PCl.jpg
+https://wiki.manjaro.org/images/1/13/Awesome.png
+https://assets.pcmag.com/media/images/507158-macos-sierra-s-new-apfs-file-system.jpg?thumb=y&width=740&height=463
+https://i.stack.imgur.com/4Jh7t.jpg
