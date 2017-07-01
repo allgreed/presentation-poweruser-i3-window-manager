@@ -3,24 +3,41 @@
 
 Note:
 node bower_components/reveal.js/plugin/notes-server/
-Na ekranie nr 8
+Na workspacie nr 8
 
 
 
 # <span style="color: #b58900">Disclaimer</span>
 <!-- .slide: data-background-color="black" -->
 
+Note:
+Polecam ściągnąć sobie presentation.md z Githuba, żeby nie przepisywać dużej ilości komend. Link na meetupie.
+
 
 ## <span style="color: #b58900">Cykl PowerUser</span>
 <!-- .slide: data-background-color="black" -->
 
+Note:
+Mam nadzieję zastartować cykl. Jak ktoś z was coś umie fajnego to zapraszam do pokazania. Chętnie się nauczę. Power user to użytkownik, który nie boi się czasem pogrzebać w kernelu, żeby to komputer pracował dla niego, a nie na odwrót.
 
-## <span style="color: #b58900">Idea OpenSource</span>
+
+## <span style="color: #b58900">Idea OpenSource z punktu widzenia Power Usera</span>
 <!-- .slide: data-background-color="black" -->
+
+Note:
+Free Libre/OpenSource Software. Komputer ma pracować dla jego właściciela, a nie dla amerykańskich, międzynarodowych korporacji. Otwaty kod pozwala na dostosowywanie do własnych potrzeb i pozwala sprawdzić, czy oprogramowanie nie działa przeciwko Tobie. IMO nie musi być darmowe, ale fajnie jak jest. GNU/Linux > Windows. Power using na Windowsie -> nauka tańca w gipsie.
 
 
 ## <span style="color: #b58900">Hacker:Space</span>
 <!-- .slide: data-background-color="black" -->
+
+Note:
+Hacker:Space to 3 rzeczy:
+- oszczędność czasu i hajsu
+- wymiana wiedzą
+- community
+
+Nikt nie sponsoruje nam tej miejscówki, sami za nią płacimy, więc wrzućcie pieniądz do puszek, na konto lub Patronite'a. Piwo jest w lodówce.
 
 
 
@@ -41,7 +58,7 @@ Note:
 ## Demo time!
 
 Note:
-Na maszynie wirtualnej, odpalam TTY (ctrl+F1), przechodzę na pulpit, edytuję vimem keton.txt, odpalam "cal", wyszukuję lynxem na google.pl "keton", próbuję odpalić firefoxa, załączam X ```startx```, odpalam cosie, załączam Compiza ```compiz```
+Na maszynie wirtualnej, odpalam TTY (ctrl+F1), przechodzę na pulpit, edytuję vimem keton.txt, odpalam "cal", wyszukuję lynxem na google.pl "keton", wttr.in, tmux, próbuję odpalić firefoxa, załączam X ```startx```, odpalam cosie, załączam Compiza ```compiz```
 
 
 
@@ -81,6 +98,29 @@ Dyn: Okna wskakują "same", predefiniowane layouty
 
 Note:
 Jak coś jest do wszystkiego to jest do niczego, w praktyce z floatowania się nie korzysta
+
+
+
+# Czemu tiling wm?
+
+
+![](img/te_meme.png)
+
+Note:
+Taki sam case jak vim  vs. notepad, jak ogarniesz to wymiatasz (i wcale nie trwa to tak długo)
+W mareriałach mam notkę nt. mysz vs. klawiatura
+
+
+![](/img/screen_space.png)
+
+Note:
+Oszczędność miejsca na ekarnie. Screen mojego ekranu, wszystko jest czytelne i na swoim miejscu. Ramki 1px można wyłączyć od 0, ale ja je lubię.
+
+
+![](img/multi-monitor-setup.png)
+
+Note:
+Kiedy pracujesz na kilku monitorach to znaaaaacznie ułatwia prace i rozmieszczanie okien
 
 
 
@@ -143,6 +183,9 @@ U mnie:
 
 ## <span style="color: #b58900">Disclaimer</span>
 <!-- .slide: data-background-color="black" -->
+
+Note:
+Deep dive brzmi strasznie, ale warto. Używam i3 od miesiąca. Zacząłem poprzed odinstalowanie Unity, żebym musiał się nauczyć go używać porządnie. Po 1.5h było nieźle po całym dniu było spoko, po 2 dniach było super. Vima znam od roku, a dalej go nie umiem, bo siedzę w Sublime'ie.
 
 
 ## Instalacja i3
@@ -306,27 +349,135 @@ kernel dostaje od klawiatury
 
 Note: 
 kernel dostaje od klawiatury
-<!-- Podstawowa konfiguracja i3 status -->
-<!-- Jak ustawić tapetę -->
-<!-- Font awesome -->
-<!-- - Bonus: jak połącyć się z wifi z konsoli ;) -->
-<!-- Add notes to disclaimers -> all -->
-
-
-Questions? :)
 
 
 
-## Materiały:
-- http://walther.io/how-to-replace-unity-with-i3-window-manager-on-ubuntu-1204/
-- https://i3wm.org/screenshots/
-- https://fedoramagazine.org/getting-started-i3-window-manager/
-- https://i3wm.org/docs/userguide.html
+# Przypisanie apki do workspace'a
 
 
-## Ciekawe linki:
+## Klasa okna
+```
+    xprop | grep -i class | awk '{print $4}'
+```
+
+![](img/out_class.png)
+
+Note:
+Odpalam skrypt w 1 oknie, klikam na inne i outputuje mi klasy.
+
+
+## Config
+```
+    assign [class="[WINDOW CLASS]"] → [DESIRED WORKSPACE]
+```
+
+np.
+
+```
+    assign [class="Franz"] → "10"
+```
+
+
+
+# Ikonki
+
+  
+
+Note:
+Otwieranie konkretnych rzeczy na konkretnym workspacie
+
+
+## Workspace'y na zmienne
+
+```
+    set $wsp[N]: "[N]"
+```
+
+np.:
+
+```
+    set $wsp1 "1"
+    set $wsp2 "2"
+    set $wsp3 "3"
+    set $wsp4 "4"
+    set $wsp5 "5"
+    set $wsp6 "6"
+    set $wsp7 "7"
+    set $wsp8 "8"
+    set $wsp9 "9"
+    set $wsp10 "10"
+```
+
+
+## Instalacja font z ikonami
+np. font awesome
+
+```
+    sudo apt install fonts-font-awesome
+```
+
+Note:
+Wymagany restart / przeładowanie fontów
+
+
+## Font Awesome Cheatsheet
+
+![](img/fa_ch.png)
+
+Note:
+Kopiujemy ze stronki, wrzucamy do cofigu
+
+
+## Ostatecznie
+
+```
+    set $wsp10 "10: "
+```
+
+
+
+# Bonus: jak połącyć się po wifi z konsoli :D
+
+
+Nieinteraktywne CLI:
+```
+    nmcli
+```
+
+Interaktywne CLI:
+```
+    nmtui
+```
+
+Blokowanie peryferiów bezprzewodowych:
+```
+    rfkill
+```
+
+Note:
+np. "nmcli dev wifi" -> do użycia przy skryptowaniu, "nmtui connect" -> tylko edytor połączenia, "rfkill block/unblock"
+
+
+
+## Materiały do prezki:
+- [Mouse vs keyboard](https://ux.stackexchange.com/questions/30682/are-there-any-recent-studies-of-the-keyboard-vs-mouse-issue)
+- [Basic tutorial 0 (Ubuntu 12.04)](http://walther.io/how-to-replace-unity-with-i3-window-manager-on-ubuntu-1204/)
+- [Basic tutorial 1 (Fedora)](https://fedoramagazine.org/getting-started-i3-window-manager/)
 - [1st demo inspiration](https://www.youtube.com/watch?v=4J5snV2wjtw)
 - [Window managers comparison](https://wiki.archlinux.org/index.php/Comparison_of_tiling_window_managers)
 - [Window managers memory consumption](https://askubuntu.com/questions/181370/how-heavy-on-resources-is-cinnamon-desktop-environment)
 - [Scancodes, keycodes, keysyms theory](http://www.tldp.org/HOWTO/BackspaceDelete/actions.html)
 - [More on keycodes and keysyms](https://wiki.archlinux.org/index.php/extra_keyboard_keys)
+
+
+## Przydatne linki:
+- [Video tutorials & screenshots](https://i3wm.org/screenshots/)
+- [Comprehensive text tutorial](https://i3wm.org/docs/userguide.html)
+- [User contributed configs](http://dotshare.it/category/wms/i3/)
+
+
+
+# Pytanka? :)
+
+
+## Podziękował!
