@@ -12,13 +12,14 @@ Na workspacie nr 8
 
 Note:
 Polecam ściągnąć sobie presentation.md z Githuba, żeby nie przepisywać dużej ilości komend. Link na meetupie.
+Moje opinie są moje, a nie mojego pracodawcy lub podmiotów, w których jestem udziałowcem.
 
 
-## <span style="color: #b58900">Cykl PowerUser</span>
+## <span style="color: #b58900">Power User</span>
 <!-- .slide: data-background-color="black" -->
 
 Note:
-Mam nadzieję zastartować cykl. Jak ktoś z was coś umie fajnego to zapraszam do pokazania. Chętnie się nauczę. Power user to użytkownik, który nie boi się czasem pogrzebać w kernelu, żeby to komputer pracował dla niego, a nie na odwrót.
+Mam nadzieję zastartować cykl. Jak ktoś z was coś umie fajnego to zapraszam do pokazania. Chętnie się nauczę. Power user to użytkownik, który nie boi się czasem pogrzebać w kernelu, żeby to komputer pracował dla niego, a nie na odwrót. Ja robię tę prezkę. Teraz wasza kolej.
 
 
 ## <span style="color: #b58900">Idea OpenSource z punktu widzenia Power Usera</span>
@@ -58,7 +59,7 @@ Note:
 ## Demo time!
 
 Note:
-Na maszynie wirtualnej, odpalam TTY (ctrl+F1), przechodzę na pulpit, edytuję vimem keton.txt, odpalam "cal", wyszukuję lynxem na google.pl "keton", wttr.in, tmux, próbuję odpalić firefoxa, załączam X ```startx```, odpalam cosie, załączam Compiza ```compiz```
+Na maszynie wirtualnej, odpalam TTY (ctrl+F1), przechodzę na pulpit, edytuję vimem keton.txt, odpalam "cal", wyszukuję lynxem na google.pl "keton", tmux, próbuję odpalić firefoxa, załączam X ```startx```, odpalam cosie, załączam Compiza ```compiz```
 
 
 
@@ -219,6 +220,8 @@ Note:
 ```
     vim .config/i3/config
 ```
+
+### Terminal (default): Mod + Enter
 
 
 ![](img/basic_config.png)
@@ -472,12 +475,19 @@ np. "nmcli dev wifi" -> do użycia przy skryptowaniu, "nmtui connect" -> tylko e
 
 ## Przydatne linki:
 - [Video tutorials & screenshots](https://i3wm.org/screenshots/)
-- [Comprehensive text tutorial](https://i3wm.org/docs/userguide.html)
+- [Comprehensive text guide / docs](https://i3wm.org/docs/userguide.html)
 - [User contributed configs](http://dotshare.it/category/wms/i3/)
 
 
 
 # Pytanka? :)
+
+
+## <span style="color: #b58900">Feedback</span>
+<!-- .slide: data-background-color="black" -->
+
+Note:
+Jak chcecie, żeby było inaczej to musicie dać znaka, bo ja inaczej nie wiem :c
 
 
 ## Podziękował!
